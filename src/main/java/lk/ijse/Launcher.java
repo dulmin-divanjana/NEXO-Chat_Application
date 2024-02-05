@@ -14,6 +14,7 @@ public class Launcher extends Application {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/welcome_page.fxml"))));
         stage.setTitle("welcome page");
         stage.centerOnScreen();
+
         stage.show();
     }
 }
