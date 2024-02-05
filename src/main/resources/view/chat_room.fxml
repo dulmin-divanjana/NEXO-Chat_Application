@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="635.0" prefWidth="374.0" style="-fx-background-color: #D9D9D9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ChatController">
+   <children>
+      <ScrollPane layoutX="14.0" layoutY="65.0" prefHeight="489.0" prefWidth="346.0">
+         <content>
+            <VBox fx:id="msgVbox" prefHeight="474.0" prefWidth="346.0" style="-fx-background-color: #ffe6ff;" />
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutY="561.0" prefHeight="74.0" prefWidth="374.0" style="-fx-background-color: #4d004d;">
+         <children>
+            <TextField fx:id="txtMsg" layoutX="8.0" layoutY="22.0" prefHeight="31.0" prefWidth="192.0" promptText="Type a massage" style="-fx-background-color: #800080;" />
+            <ImageView fitHeight="32.0" fitWidth="54.0" layoutX="212.0" layoutY="21.0" onMouseClicked="#send_on_action" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/sended.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="254.0" layoutY="21.0" onMouseClicked="#image_on_action" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/cam.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="286.0" layoutY="14.0" onAction="#emoji_on_action" text=" ">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/emoji_pane.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="emojiPane" layoutX="160.0" layoutY="334.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <GridPane fx:id="emojiGrid" layoutY="-2.0" prefHeight="200.0" prefWidth="200.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblName" layoutX="69.0" layoutY="14.0" textFill="RED" />
+      <Pane layoutY="-26.0" prefHeight="66.0" prefWidth="374.0" style="-fx-background-color: #4d004d; -fx-background-radius: 0;">
+         <children>
+            <Label layoutX="135.0" layoutY="32.0" text="CHAT NOW" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
